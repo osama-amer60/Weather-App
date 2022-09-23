@@ -28,3 +28,6 @@ input::placeholder{
     background-color: #DDD;
     width: 20vh;
 }
+#goBack{
+    cursor: pointer;
+}

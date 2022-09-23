@@ -16,27 +16,57 @@
 <body>
     
     <div class="container h-100">
-
          <!-- setting section -->
          <section id="setting" class="bg-white  p-3 text-center m-auto ">
             <div class="border-bottom text-start text-primary mb-3">
                 <h4>Weather App</h4>
             </div> 
-            <div id="popupmessage" class="warning mb-3 pt-1 rounded-3 ">
+            <div id="popupmessage" class="warning mb-3 pt-2 rounded-3 d-none">
                 User denied Geolocation
             </div>
-            <input class="form-control mb-2" type="text" placeholder="Enter City name">
+            <input id="inputfield" class="form-control mb-2" type="text" placeholder="Enter City name">
             <div class=" text-muted mb-3">
                 <div class="space"></div> or  <div class="space"></div>
             </div>
+            <button id="getWeatherBtn" class="btn btn-danger w-100 mb-3" > Get The Weather </button>
             <button class="btn btn-primary w-100 mb-3" > Get Device Location </button>
+        </section> 
+
+        <!-- displat the weather section -->
+        <section id="displayTheWeather" class="bg-white  p-3 pb-0 text-center m-auto d-none">
+            <div class="border-bottom text-start text-primary mb-3 pb-2">
+                <i id="goBack" class="fa-solid fa-arrow-left text-primary"></i>&nbsp;&nbsp; 
+                <h4 class="d-inline">Weather App</h4>
+            </div> 
+            <div id="weatherOfCity">
+                <img id="disImg" src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="">
+                <h1 class="mb-3"> <span  id="temp" >21</span> °C</h1>
+                <h3 id="disCity">mansoura</h3>
+                <h4 id="disCountry">mansoura</h4>
+            </div>
+            <div id="weatherFooter" class="row border-top mt-4">
+                <div class="col-6 border-end p-2">
+                    <div class="row">
+                        <div class="col-4 pt-4"> <i class="fa-sharp fa-solid fa-gauge-simple-high fa-xl text-primary"></i>  </div>
+                        <div class="col-8"> 
+                            <span id="windSpeed"> 23 </span> k/h  <br>
+                            wind speed
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 p-2">
+                    <div class="row">
+                        <div class="col-4 pt-4">  <i class="fa-solid fa-temperature-half fa-xl text-primary"></i>    </div>
+                        <div class="col-8"> 
+                            <span id="humidity">93</span>  % <br>
+                            Humidity
+                        </div>
+                    </div>
+                </div>
+            </div>          
         </section>    
-
-
-        
             
-            
-    </div>
+   </div>
     <script src="js/main.js"></script>
 </body>
 </html>
